@@ -1,11 +1,14 @@
 import "./App.css";
 import DefaultLayout from "./Layout/DefaultLayout";
+import Dashboard from "./pages/dashboard/Dashboard";
 import Entry from "./pages/entry/Entry.page";
 
 function App() {
   return (
     <div className="App">
-      <DefaultLayout>Send page component</DefaultLayout>
+      <DefaultLayout>
+        <Dashboard />
+      </DefaultLayout>
       {/* <Entry /> */}
     </div>
   );
