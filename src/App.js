@@ -1,15 +1,16 @@
 import "./App.css";
 import DefaultLayout from "./Layout/DefaultLayout";
-import Dashboard from "./pages/dashboard/Dashboard";
-import Entry from "./pages/entry/Entry.page";
+// import Dashboard from "./pages/dashboard/Dashboard";
+import AddTicket from "./pages/new-ticket/AddTicket";
 
 function App() {
   return (
     <div className="App">
       <DefaultLayout>
-        <Dashboard />
+        {/* <Entry /> */}
+        {/* <Dashboard /> */}
+        <AddTicket />
       </DefaultLayout>
-      {/* <Entry /> */}
     </div>
   );
 }
