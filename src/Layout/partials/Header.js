@@ -12,9 +12,11 @@ const Header = () => {
   };
   return (
     <Navbar collapseOnSelect bg="info" variant="dark" expand="md">
-      <Navbar.Brand href="#home">
-        <img src={Logo} alt="logo" width={50} />
-      </Navbar.Brand>
+      <LinkContainer to="/dashboard">
+        <Navbar.Brand>
+          <img src={Logo} alt="logo" width={50} />
+        </Navbar.Brand>
+      </LinkContainer>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
