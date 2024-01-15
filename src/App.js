@@ -2,6 +2,7 @@ import "./App.css";
 import DefaultLayout from "./Layout/DefaultLayout";
 // import Dashboard from "./pages/dashboard/Dashboard";
 import AddTicket from "./pages/new-ticket/AddTicket";
+import TicketLists from "./pages/ticket-list/TicketLists";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <DefaultLayout>
         {/* <Entry /> */}
         {/* <Dashboard /> */}
-        <AddTicket />
+        {/* <AddTicket /> */}
+        <TicketLists />
       </DefaultLayout>
     </div>
   );
