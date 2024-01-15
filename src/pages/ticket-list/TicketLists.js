@@ -4,6 +4,8 @@ import BreadCrumb from "../../components/breadcrumb/Breadcrumb";
 import SearchForm from "../../components/search-form/SearchForm";
 import TicketTable from "../../components/ticket-table/TicketTable";
 import tickets from "../../assets/data/dummy-tickets.json";
+import DefaultLayout from "../../Layout/DefaultLayout";
+import { Link } from "react-router-dom";
 
 const TicketLists = () => {
   const [str, setStr] = useState("");
@@ -26,28 +28,32 @@ const TicketLists = () => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col>
-          <BreadCrumb page={"Ticket Lists"} />
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col>
-          <Button variant="info">Add New Ticket</Button>
-        </Col>
-        <Col className="text-end">
-          <SearchForm handleOnChange={handleOnChange} str={str} />
-        </Col>
-      </Row>
-      <hr />
+    <DefaultLayout>
+      <Container>
+        <Row>
+          <Col>
+            <BreadCrumb page={"Ticket Lists"} />
+          </Col>
+        </Row>
+        <Row className="mt-4">
+          <Col>
+            <Link to="/add-ticket">
+              <Button variant="info">Add New Ticket</Button>
+            </Link>
+          </Col>
+          <Col className="text-end">
+            <SearchForm handleOnChange={handleOnChange} str={str} />
+          </Col>
+        </Row>
+        <hr />
 
-      <Row>
-        <Col>
-          <TicketTable tickets={displayTicket} />
-        </Col>
-      </Row>
-    </Container>
+        <Row>
+          <Col>
+            <TicketTable tickets={displayTicket} />
+          </Col>
+        </Row>
+      </Container>
+    </DefaultLayout>
   );
 };
 
